@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precvičovanie LSPD kódov SunriseRP</title>
+    
+    <!-- Open Graph Meta Tags for link previews -->
+    <meta property="og:title" content="Precvičovanie LSPD kódov SunriseRP" />
+    <meta property="og:description" content="Trénujte svoje znalosti LSPD kódov na SunriseRP pomocou tejto interaktívnej stránky. Zistite, aký je význam rôznych policajných kódov!" />
+    <meta property="og:image" content="https://i.ibb.co/5nXYsvH/lspd.webp" /> <!-- Replace with your image URL -->
+    <meta property="og:url" content="http://127.0.0.1:5500/index.html" /> <!-- Replace with your website URL -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sk_SK" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        #startBtn, #checkAnswerBtn, #nextBtn {
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+        #startBtn:hover, #checkAnswerBtn:hover, #nextBtn:hover {
+            background-color: #0056b3;
+        }
+        #practiceArea {
+            background-color: #333333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+        #codeDisplay {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1rem;
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            border: 2px solid #555555;
+            border-radius: 5px;
+            background-color: #222222;
+            color: #ffffff;
+        }
+        #result {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        #correctAnswer {
+            font-size: 1rem;
+            color: #ff4d4d;
+            margin-top: 10px;
+        }
+        button:focus, input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Precvičovanie LSPD kódov SunriseRP</h1>
+    <button id="startBtn">Začať Cvičenie</button>
+    
+    <div id="practiceArea" style="display:none;">
+        <div id="codeDisplay"></div>
+        <input type="text" id="userInput" placeholder="Napíšte význam kódu">
+        <button id="checkAnswerBtn">Skontrolovať Odpoveď</button>
+        <div id="result"></div>
+        <div id="correctAnswer"></div>
+        <button id="nextBtn" style="display:none;">Ďalší kód</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
